@@ -1,13 +1,26 @@
-namespace GameStore.api.Entities;
+using System.ComponentModel.DataAnnotations;
 
-public class Game
+namespace GameStore.api.Entities
 {
+    public class Game
+    {
+        public int ID { get; set; }
 
-    public int ID { get; set; }
-    public required string Name { get; set; }
-    public required string Genre { get; set; }
+        [Required]  // validation added
+        [StringLength(30)]
+        public string Name { get; set; }
 
-    public decimal Price { get; set; }
-    public DateTime ReleaseDate { get; set; }
-    public required string ImageUri { get; set; }
+        [Required]
+        [StringLength(30)]
+        public string Genre { get; set; }
+
+        [Range(0, 100)]
+        public decimal Price { get; set; }
+
+        public DateTime ReleaseDate { get; set; }
+
+        [Url]
+        [StringLength(255)]
+        public string ImageUri { get; set; }
+    }
 }
