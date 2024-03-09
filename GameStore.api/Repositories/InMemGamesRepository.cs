@@ -5,7 +5,7 @@ namespace GameStore.api.Repositories;
 public class InMemGamesRepository
 {
     // Create a list of games with type Game (which is defined in the GameStore.api/Entities/Game.cs file imported with the using statement above)
-    private readonly List<Game> games = new() // static because we will use it in a static method
+    private readonly List<Game> games = new() // readonly means that the list can't be reassigned, but the items in the list can be modified
     {
         new Game(){
             ID = 1,
