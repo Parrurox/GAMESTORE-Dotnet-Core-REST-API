@@ -12,7 +12,7 @@ public static class GamesEndpoints
     {
 
 
-        InMemGamesRepository repository = new();
+        // InMemGamesRepository repository = new(); // before using dependency injection
         // -------------- Route Grouping -----------------------------------------------------
         var group = routes.MapGroup("/games")
                         .WithParameterValidation(); // Enable parameter validation for all routes in this group(comes from miniapis package)
@@ -22,10 +22,10 @@ public static class GamesEndpoints
 
         // -------------- Get all games -----------------------------------------------------
         // app.MapGet("/games", () => games); // before using route group
-        group.MapGet("/", () => repository.GetAll()); // after using route group
+        group.MapGet("/", (IGamesReposity repository) => repository.GetAll()); // after using route group
 
         // -------------- Get game by ID ----------------------------------------------------
-        group.MapGet("/{id}", (int id) =>
+        group.MapGet("/{id}", (IGamesReposity repository, int id) =>
         {
             Game? game = repository.Get(id);
             return game is not null ? Results.Ok(game) : Results.NotFound();
@@ -36,14 +36,14 @@ public static class GamesEndpoints
 
         // -------------- Create a new game ----------------------------------------
 
-        group.MapPost("/", (Game newGame) =>
+        group.MapPost("/", (Game newGame, IGamesReposity repository) =>
         {
             repository.Create(newGame);
             return Results.CreatedAtRoute(GetGameEndpointName, new { id = newGame.ID }, newGame);
         });
 
         // -------------- Update a game ----------------------------------------
-        group.MapPut("/{id}", (int id, Game updatedGame) =>
+        group.MapPut("/{id}", (IGamesReposity repository, int id, Game updatedGame) =>
         {
             Game? existingGame = repository.Get(id);
             if (existingGame is null)
@@ -60,7 +60,7 @@ public static class GamesEndpoints
         });
 
         // -------------- Delete a game ----------------------------------------
-        group.MapDelete("/{id}", (int id) =>
+        group.MapDelete("/{id}", (IGamesReposity repository, int id) =>
         {
             Game? Exist = repository.Get(id);
             if (Exist is not null)

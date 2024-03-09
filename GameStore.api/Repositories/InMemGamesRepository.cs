@@ -2,7 +2,8 @@ using GameStore.api.Entities;
 
 namespace GameStore.api.Repositories;
 
-public class InMemGamesRepository
+
+public class InMemGamesRepository : IGamesReposity
 {
     // Create a list of games with type Game (which is defined in the GameStore.api/Entities/Game.cs file imported with the using statement above)
     private readonly List<Game> games = new() // readonly means that the list can't be reassigned, but the items in the list can be modified
@@ -69,3 +70,4 @@ public class InMemGamesRepository
         games.RemoveAt(index);
     }
 }
+
