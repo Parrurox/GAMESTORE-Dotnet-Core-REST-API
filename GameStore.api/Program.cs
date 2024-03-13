@@ -1,3 +1,4 @@
+using GameStore.api.Data;
 using GameStore.api.Endpoints;
 using GameStore.api.Repositories;
 
@@ -10,7 +11,7 @@ builder.Services.AddSingleton<IGamesReposity, InMemGamesRepository>(); // only o
 
 var connString = builder.Configuration.GetConnectionString("GameStoreContext"); // get connection string from appsettings.json
 
-
+builder.Services.AddSqlServer<GameStoreContext>(connString); // add db context to services
 
 var app = builder.Build();
 
