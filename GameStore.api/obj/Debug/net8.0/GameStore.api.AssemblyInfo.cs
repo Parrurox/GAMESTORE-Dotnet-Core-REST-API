@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("798ecc55-cf07-43a5-a823-b7ef06cd59c1")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameStore.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d236f6f1a29eb10d0b48c3becbf2db477ef7c56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+880459275b28f497636cbb53c78c6cf06aada7c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameStore.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameStore.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\gamestore.api\\GameStore.api.csproj": {}
+    "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\GameStore.api\\GameStore.api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\gamestore.api\\GameStore.api.csproj": {
+    "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\GameStore.api\\GameStore.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\gamestore.api\\GameStore.api.csproj",
+        "projectUniqueName": "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\GameStore.api\\GameStore.api.csproj",
         "projectName": "GameStore.api",
-        "projectPath": "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\gamestore.api\\GameStore.api.csproj",
+        "projectPath": "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\GameStore.api\\GameStore.api.csproj",
         "packagesPath": "C:\\Users\\shaik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\gamestore.api\\obj\\",
+        "outputPath": "C:\\Users\\shaik\\OneDrive\\Desktop\\dotnet_C#\\dotnet_tutorial\\GameStore\\GameStore.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shaik\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -7,7 +7,7 @@ namespace GameStore.api.Entities
         public int ID { get; set; }
 
         [Required]  // validation added
-        [StringLength(30)]
+        [StringLength(50)]
         public string Name { get; set; }
 
         [Required]
