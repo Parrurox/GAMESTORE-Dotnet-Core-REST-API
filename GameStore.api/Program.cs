@@ -1,6 +1,7 @@
 using GameStore.api.Data;
 using GameStore.api.Endpoints;
 using GameStore.api.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 
 
@@ -18,6 +19,11 @@ var app = builder.Build();
 // -------------- Route Grouping -----------------------------------------------------
 // var group = app.MapGroup("/games")
 //                 .WithParameterValidation(); // Enable parameter validation for all routes in this group(comes from miniapis package)
+
+
+
+// create a scope to get a GameStoreContext instance and apply any pending migrations to the database
+app.Services.InitializeDb();
 
 app.MapGamesEndpoints(); // after using route group
 
