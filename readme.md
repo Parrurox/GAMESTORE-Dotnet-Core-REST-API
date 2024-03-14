@@ -16,4 +16,4 @@
 
 Join me on this amazing journey in .NET development! Let's build robust and scalable applications together. 🚀💻
 
-#dotnet #webdevelopment #dotnetcore #journey #linkedinpromo
+#dotnet #webdevelopment #dotnetcore #journey
